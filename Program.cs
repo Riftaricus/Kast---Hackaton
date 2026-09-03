@@ -1,4 +1,4 @@
-﻿namespace Kast
+﻿namespace Kast___Hackaton
 {
     class Program
     {
