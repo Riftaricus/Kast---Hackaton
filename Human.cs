@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,6 +17,11 @@ namespace Kast___Hackaton
         {
             this.firstName = firstName;
             this.surName = surName;
+        }
+
+        public void Debug()
+        {
+            Console.WriteLine(firstName + " " + surName);
         }
     }
 }

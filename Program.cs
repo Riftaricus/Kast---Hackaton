@@ -4,7 +4,9 @@
     {
         static void Main()
         {
-            Console.WriteLine("Test");
+            Human human = new Sporter("Bob", "Ross");
+
+            human.Debug();
         }
     }
 }
