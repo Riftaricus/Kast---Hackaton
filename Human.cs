@@ -21,7 +21,7 @@ namespace Kast___Hackaton
 
         public void Debug()
         {
-            Console.WriteLine(firstName + " " + surName);
+            Console.WriteLine(this.GetType() +  " " +firstName + " " + surName);
         }
     }
 }

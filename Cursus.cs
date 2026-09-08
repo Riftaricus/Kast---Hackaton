@@ -10,8 +10,12 @@ namespace Kast___Hackaton
         private string type;
         private string name;
 
+        private List<Human> attendees;
+
         public string Type { get { return type; } }
         public string Name { get { return name; } }
+
+        public List<Human> Attendees { get { return attendees; }}
 
         public Cursus(string type, string name)
         {
@@ -19,14 +23,22 @@ namespace Kast___Hackaton
             this.name = name;
         }
 
-        public void signUp()
+        public void signUp(Human human)
         {
+            if (human == null) return;
 
+            if (attendees.Contains(human)) return;
+
+            attendees.Add(human);
         }
         
-        public void remove()
+        public void remove(Human human)
         {
-            
+            if (human == null) return;
+
+            if (!attendees.Contains(human)) return;
+
+            attendees.Remove(human);
         }
     }
 }

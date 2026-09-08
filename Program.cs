@@ -1,12 +1,18 @@
-﻿namespace Kast___Hackaton
+﻿using System.Runtime.InteropServices;
+
+namespace Kast___Hackaton
 {
     class Program
     {
         static void Main()
         {
-            Human human = new Sporter("Bob", "Ross");
+            foreach (Sporter sporter in Factory.GenerateSporters())
+            {
+                sporter.Debug();
+            }
 
-            human.Debug();
+
+
         }
     }
 }
