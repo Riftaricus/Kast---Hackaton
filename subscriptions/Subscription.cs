@@ -8,18 +8,16 @@ namespace Kast___Hackaton
 {
     public abstract class Subscription
     {
-        string name;
-
         public Subscription()
         {
-
+            
         }
 
         public bool CompareType(Subscription type)
         {
             if (type != null) return false;
 
-            if (type.GetType() != this.GetType())
+            if (type?.GetType() != this.GetType())
             {
                 return false;
             }

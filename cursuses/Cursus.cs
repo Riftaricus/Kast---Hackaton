@@ -5,22 +5,20 @@ using System.Threading.Tasks;
 
 namespace Kast___Hackaton
 {
-    public class Cursus
+    public abstract class Cursus
     {
-        private string type;
         private string name;
 
         private List<Human> attendees;
 
-        public string Type { get { return type; } }
         public string Name { get { return name; } }
 
         public List<Human> Attendees { get { return attendees; }}
 
-        public Cursus(string type, string name)
+        public Cursus(string name)
         {
-            this.type = type;
             this.name = name;
+            this.attendees = new List<Human>();
         }
 
         public void signUp(Human human)
