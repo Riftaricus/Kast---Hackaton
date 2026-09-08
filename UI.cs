@@ -17,10 +17,29 @@ namespace Kast___Hackaton
             Console.WriteLine("Options:");
             int response = 0;
             string[] options = ["Test", "Test2", "Test3"];
-            while (response == 0 || response > options.Length) 
+            while (response == 0 || response > options.Length)
             {
-                response = ShowOptions(["Test", "Test2", "Test3"]);
-                Console.WriteLine(response);
+                response = ShowOptions(options);
+            }
+
+            switch (response)
+            {
+                case 1:
+                    {
+                        Console.WriteLine(1);
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine(2);
+                        break;
+                    }
+
+                case 3:
+                    {
+                        Console.WriteLine(3);
+                        break;
+                    }
             }
 
         }
