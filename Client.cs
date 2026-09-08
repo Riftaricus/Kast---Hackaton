@@ -42,7 +42,7 @@ namespace Kast___Hackaton
 
         public void Run()
         {
-            
-        }
+            UI.PrintMenu();
+        }   
     }
 }
