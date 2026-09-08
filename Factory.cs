@@ -31,5 +31,27 @@ namespace Kast___Hackaton
 
             return sporters;
         }
+
+        private static Coach GenerateCoach()
+        {
+            Random random = new Random();
+
+            string firstName = firstNames[random.Next(0, firstNames.Length)];
+            string lastName = lastNames[random.Next(0, lastNames.Length)];
+
+            return new Coach(firstName, lastName);
+
+        }
+
+        public static List<Coach> GenerateCoaches()
+        {
+            List<Coach> coaches = new List<Coach>();
+            for (int i = 0; i < 10; i++)
+            {
+                coaches.Add(GenerateCoach());
+            }
+
+            return coaches;
+        }
     }
 }

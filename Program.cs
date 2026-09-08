@@ -11,6 +11,11 @@ namespace Kast___Hackaton
                 sporter.Debug();
             }
 
+            foreach (Coach coach in Factory.GenerateCoaches())
+            {
+                coach.Debug();
+            }
+
 
 
         }
