@@ -4,22 +4,25 @@ namespace Kast___Hackaton
 {
     class Program
     {
+
+        public static Client client;
         static void Main()
         {
-            Client client = new Client();
+            Client localClient = new Client();
 
             foreach (Sporter sporter in Factory.GenerateSporters())
             {
-                client.AddSporter(sporter);
+                localClient.AddSporter(sporter);
             }
 
             foreach (Coach coach in Factory.GenerateCoaches())
             {
-                client.AddCoach(coach);
+                localClient.AddCoach(coach);
             }
 
-            client.Run();
+            client = localClient;
 
+            localClient.Run();
 
 
         }

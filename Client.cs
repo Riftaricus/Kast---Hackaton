@@ -40,6 +40,16 @@ namespace Kast___Hackaton
             coaches.Remove(coach);
         }
 
+        public List<Sporter>? GetSporters()
+        {
+            if (sporters == null)
+            {
+                return null;
+            }
+
+            return sporters;
+        }
+
         public void Run()
         {
             UI.PrintMenu();
