@@ -24,17 +24,21 @@ namespace Kast___Hackaton
             {
                 case 1:
                     {
-                        List<string> sporterNames = new List<string>();
+                        Sporter sporter = Program.client.SelectSporter();
 
-                        foreach (Sporter sporter in Program.client.GetSporters())
+                        Cursus cursus = Program.client.SelectCursus();
+
+                        if (cursus.RequiredSubscription.CompareType(sporter.Subscription))
                         {
-                            sporterNames.Add($"{sporter.FirstName} {sporter.SurName}");
+                            cursus.signUp(sporter);
+                            Console.WriteLine("Succesfully signed up user to course");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed to sign up user for course (Wrong subscription type)");
                         }
 
-                        string[] sporters = sporterNames.ToArray();
-                        int sporterId = ShowOptions(sporters);
 
-                        Console.WriteLine(Program.client.GetSporters()[sporterId - 1].FirstName);
                         break;
 
                     }

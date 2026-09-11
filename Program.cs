@@ -20,6 +20,10 @@ namespace Kast___Hackaton
                 localClient.AddCoach(coach);
             }
 
+            localClient.AddCursus(new PilatesCursus("Pilates", new CursusSubscription()));
+            localClient.AddCursus(new PoleDancingCursus("Pole Dancing", new CursusSubscription()));
+            localClient.AddCursus(new YogaCursus("Yoga", new CursusSubscription()));
+
             client = localClient;
 
             localClient.Run();

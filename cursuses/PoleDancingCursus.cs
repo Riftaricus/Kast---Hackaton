@@ -7,7 +7,7 @@ namespace Kast___Hackaton
 {
     public class PoleDancingCursus : Cursus
     {
-        public PoleDancingCursus(string name) : base(name)
+        public PoleDancingCursus(string name, Subscription requiredSubscription) : base(name, requiredSubscription)
         {
         }
     }
