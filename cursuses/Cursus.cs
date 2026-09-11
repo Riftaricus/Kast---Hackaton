@@ -9,15 +9,19 @@ namespace Kast___Hackaton
     {
         private string name;
 
+        private Subscription requiredSubscription;
         private List<Human> attendees;
 
         public string Name { get { return name; } }
 
-        public List<Human> Attendees { get { return attendees; }}
+        public List<Human> Attendees { get { return attendees; } }
+        public Subscription RequiredSubscription { get { return requiredSubscription; } }
 
-        public Cursus(string name)
+
+        public Cursus(string name, Subscription requiredSubscription)
         {
             this.name = name;
+            this.requiredSubscription = requiredSubscription;
             this.attendees = new List<Human>();
         }
 
@@ -29,7 +33,7 @@ namespace Kast___Hackaton
 
             attendees.Add(human);
         }
-        
+
         public void remove(Human human)
         {
             if (human == null) return;
