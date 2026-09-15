@@ -7,8 +7,15 @@ namespace Kast___Hackaton
 {
     public class TwicePerWeekSubscription : Subscription
     {
-        public TwicePerWeekSubscription () : base()
+        public TwicePerWeekSubscription() : base()
         {
+            Name = "Twice Per Week Subscription";
+        }
+        public override bool Use()
+        {
+            if (Usage > 2) return false;
+            Usage += 1;
+            return true;
         }
     }
 }
