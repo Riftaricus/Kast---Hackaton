@@ -11,7 +11,7 @@
   
   Run ``git clone https://github.com/Riftaricus/Kast---Hackaton``
   
-  Run ``cd "Kast - Hackaton"``
+  Run ``cd "Kast---Hackaton"``
   
   Run ``dotnet run``
   
