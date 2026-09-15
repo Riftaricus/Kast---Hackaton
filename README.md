@@ -8,9 +8,13 @@
   Automating a bunch of their tasks and being a datacenter for all data relating to the sportschool.
 ## Launch Instructions
   You need .net installed, version 10
+  
   Run ``git clone https://github.com/Riftaricus/Kast---Hackaton``
+  
   Run ``cd "Kast - Hackaton"``
+  
   Run ``dotnet run``
+  
 
 ## Credits
   Made by Morris, Sven, Amir, Ruveyda
