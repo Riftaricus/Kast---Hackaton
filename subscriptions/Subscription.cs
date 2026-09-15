@@ -11,7 +11,7 @@ namespace Kast___Hackaton
         private string name;
         public string Name { get { return name; } set { name = value; } }
 
-        private int usage = 0;
+        private int usage = 1;
         public int Usage { get { return usage; } set { usage = value; } }
 
         public Subscription()
