@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -17,7 +18,7 @@ namespace Kast___Hackaton
             PrintDivider();
             Console.WriteLine("Options:");
 
-            int response = ShowOptions(["Register for Course", "Test2", "Test3"]);
+            int response = ShowOptions(["Register for Course", "Enter Area", "Exit Program"]);
 
 
             switch (response)
@@ -44,13 +45,15 @@ namespace Kast___Hackaton
                     }
                 case 2:
                     {
-                        Console.WriteLine(2);
+                        Sporter sporter = Program.client.SelectSporter();
+                        bool canContinue = sporter.Subscription.Use();
+                        Console.WriteLine(sporter.FirstName + " " + sporter.SurName + " is" + (canContinue ? "" : " not") + " allowed to enter");
                         break;
                     }
 
                 case 3:
                     {
-                        Console.WriteLine(3);
+                        
                         break;
                     }
             }

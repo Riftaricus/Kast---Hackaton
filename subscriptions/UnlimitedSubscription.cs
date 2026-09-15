@@ -9,6 +9,7 @@ namespace Kast___Hackaton
     {
         public UnlimitedSubscription() : base()
         {
+            Name = "Unlimited Subscription";
         }
     }
 }

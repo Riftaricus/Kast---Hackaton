@@ -82,7 +82,7 @@ namespace Kast___Hackaton
 
             foreach (Sporter sporter in Program.client.GetSporters())
             {
-                sporterNames.Add($"{sporter.FirstName} {sporter.SurName}");
+                sporterNames.Add($"{sporter.FirstName} {sporter.SurName} ({sporter.Subscription.Name})");
             }
 
             string[] sporters = sporterNames.ToArray();
@@ -108,7 +108,8 @@ namespace Kast___Hackaton
 
         public void Run()
         {
-            UI.PrintMenu();
-        }   
+            while (true)
+                UI.PrintMenu();
+        }
     }
 }
